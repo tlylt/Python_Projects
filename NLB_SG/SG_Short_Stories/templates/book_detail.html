@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+<div>
+  <h3>{{ book.title|capfirst }}</h3>
+  <p>Author: {{ book.author }}</p>
+  <p>Language: {{ book.language|upper }}</p>
+  <p>Published year: {{ book.publish_year|date:'Y'}}</p>
+  <p>{{ book.summary }}</p>
+  <p>
+    Go to Free
+    <a href="{{book.download_link}}" target="_blank">download page</a>
+  </p>
+</div>
+{% endblock %}

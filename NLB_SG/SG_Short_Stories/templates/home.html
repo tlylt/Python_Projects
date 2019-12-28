@@ -1,0 +1,15 @@
+<!--#8 make some templates-->
+{% extends "base.html" %} {% block content %}
+<div>
+  {% for book in books %}
+  <div class="bookname">
+    <a href="{% url 'book_detail' book.id %}">
+      <h3>{{book.title|capfirst }}</h3>
+    </a>
+    <p>By: {{ book.author }}</p>
+    <p>{{ book.summary }}</p>
+    <p class="hidden">{{ book.download_link }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% load static %}
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home - NLB Singapore Short Stories</title>
+    <link
+      rel="stylesheet"
+      id="ample-style-css"
+      href="{% static 'style.css' %}"
+      type="text/css"
+      media="all"
+    />
+  </head>
+  <body class="wide">
+    <div id="page" class="hfeed site">
+      <header>
+        <div class="header">
+          <div class="main-head-wrap inner-wrap clearfix">
+            <div id="header-logo-image">
+              <a href="/">
+                <img src="{% static 'images/logo.jpg' %}" alt="Books" />
+              </a>
+            </div>
+            <div id="header-text" class="">
+              <h1 id="site-title">
+                <a href="/" title="NLB Singapore Short Stories" rel="home"
+                  >NLB Singapore Short Stories</a
+                >
+              </h1>
+              <p>Singapore Short Stories from National Library Board</p>
+            </div>
+          </div>
+          <img src="{% static 'images/banner.jpg' %}" alt="books" />
+        </div>
+      </header>
+      <div class="main-wrapper">
+        <div class="single-page clearfix">
+          <div class="inner-wrap">
+            <p>
+              National Library Board READ! Singapore Short Stories
+            </p>
+            <hr />
+            <div>
+              {% block content %} {% endblock %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="colophon">
+        <div class="inner-wrap">
+          Data of the books are retrieved from Data.sg datasets.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
