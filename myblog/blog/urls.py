@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from .feeds import LatestPostsFeed
 
-app_name = 'blog'
+app_name = 'blog' # Namespace for including in Main urls.py
 
 urlpatterns = [
     # post views
